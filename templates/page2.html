@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="{{url_for('.static', filename = 'styled.css')}}">
+</head>
+
+<body>
+    <header class="Header">
+        <div class="text-box">
+            <h1 class="heading-primary">
+                <span class="heading-primary-main">Genre<br>Classifier</span>
+            </h1>
+            <a href="#" class="btn btn-white btn-animated">Dive In</a>
+        </div>                
+    </header>
+    <main>
+      <section class="section-about">
+        <div class="u-center-text  u-margin-bottom-big">
+           <h2 class="heading-secondary">
+            Explore Music
+            </h2>
+        </div>
+
+         <div class="row">
+              <div class="col-1-of-2">
+                <h3 class="heading-tertiary u-margin-bottom-small">A Way of Expression</h3>
+                  <p class="paragraph">Music gives people a way to express who they are inside through many different forms.Many people today hide who they are on the inside to try to fit in with everyone else because some people are afraid of being rejected by those around them.Music is important because it gives people a way to express themselves and be who they are on the inside.</p>
+                <h3 class="heading-tertiary u-margin-bottom-small">Music is everything</h3>
+                <p class="paragraph">Music is everywhere in our world and music relates to everything as well. Music is in all of our histories starting from the beginning. Without music we would not have anything, life would be boring and dull.</p>
+
+                <a href="#" class="btn-text">Learn More &rarr;</a>
+
+          </div>              
+              <div class="col-1-of-2">
+                <div class="composition">
+                  <img src="{{url_for('.static', filename = 'hans.jpg')}}" alt="Photo 1" class="composition__photo composition__photo--p1">
+                  <img src="{{url_for('.static', filename = 'nina.jpg')}}" alt="Photo 2" class="composition__photo composition__photo--p2">
+                  <img src="{{url_for('.static', filename = 'rehman.jpg')}}" alt="photo 3" class="composition__photo composition__photo--p3">
+                </div>
+         </div>
+      </section>
+      
+      <section class="section-book">
+        <div class="row">
+          <div class="book">
+              <h2 class="heading-secondary">
+                  Predict Genre
+                  </h2>
+           <form method="POST" action="{{url_for('upload')}}" enctype="multipart/form-data">
+             <input type="file" name="File" >
+             <button type="submit">upload</button>
+           </form>
+          </div>
+        </div>
+      </section>
+      
+      <section class="section-book">
+        <div class="row">
+          <div class="book">
+           <p>File Uploaded Successfully</p>
+           <form method="POST" action="{{url_for('predict')}}" enctype="multipart/form-data">
+            <button type="submit">predict</button>
+          </form>>
+          </div>
+        </div>
+      </section>
+      
+   </main>
+  
+  
+  
+  
+  </body>
+
+</html>

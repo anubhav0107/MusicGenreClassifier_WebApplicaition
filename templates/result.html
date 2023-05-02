@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <link rel="stylesheet" href="{{url_for('.static', filename = 'styled.css')}}">
+  </head>
+
+  <div class="container">
+    <header class="Header">
+      <div class="text-box">
+          <h1 class="heading-primary-1">
+              <span class="heading-primary-main-1">Results</span>
+          </h1>
+      </div>                
+</header>  
+</div>
+<div class="u-center-text  u-margin-bottom-big">
+  <h2 class="heading-secondary">
+   Using Machine Learning to Classify Genres of Music
+   </h2>
+</div>
+<section>
+  
+<div class="card text-center">
+  <div class="card-header">
+    Results
+  </div>
+  <div class="card-body">
+    <h5 class="card-title">Genre Classifier</h5>
+    <p class="card-text"><div class="alert alert-danger" role="alert">
+  {{ name }}
+</div></p>
+
+<!-- Main ML Prediction Display Here -->
+   
+.
+{% if prediction ==  0 %}
+    <p class="card-text"><div class="alert alert-danger" role="alert">
+  Blues
+</div></p>
+    {% elif prediction == 1 %}
+	<p class="card-text"><div class="alert alert-danger" role="alert">
+  Disco
+</div></p>
+
+
+{% elif prediction == 2 %}
+<p class="card-text"><div class="alert alert-danger" role="alert">
+Jazz
+</div></p>
+
+
+{% elif prediction == 3 %}
+<p class="card-text"><div class="alert alert-danger" role="alert">
+Rock
+</div></p>
+
+
+    
+    {% endif%}
+  </div>
+
+<!-- Main ML Prediction Display Ends Here -->
+  <div class="card-footer text-muted">
+   
+  </div>
+</div>
+</section>
+</html>
+
